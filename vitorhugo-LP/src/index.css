@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root{
-  --verde-claro: #CBED85;
-  --amarelo-queimado: #E8D39B;
-  --amarelo-queimado-escuro: #ecd9a5;
-  --marrom: #A87F54;
+  --verde-claro: #A8C686;
+  --amarelo-queimado: #ffd991;
+  --bege: #EBD5B3;
+  --marrom: #655045;
 }
