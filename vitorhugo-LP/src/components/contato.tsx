@@ -16,7 +16,7 @@ const [formData, setFormData] = useState({
   const handleEmail = (e:any) => {
     const { name, email, message } = formData;
 
-    
+    const mailURL = 'https://mail.google.com/mail/?view=cm&fs=1&to=exemplo@gmail.com'
   }
 
 
