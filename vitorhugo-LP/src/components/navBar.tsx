@@ -4,27 +4,28 @@ import closeBtn from '../assets/images/close.png'
 
     interface NavBarProps {
       opcao1: string
-      opcao2: string
-      opcao3: string
-      opcao4: string
+      op1href: string
+      opcao2?: string  
+      opcao3?: string  
+      opcao4?: string
     }
 
 export const NavBar = (props : NavBarProps) => {
     const [btn, setBtn] = useState(false)
     return(
         <section className='z-999 fixed w-full'>
-        <header className='flex w-full h-25 bg-[var(--amarelo-queimado)]'>
+        <header className='flex w-full h-15 bg-[var(--amarelo-queimado)]'>
           <nav className='flex w-full flex-col md:flex-row justify-center items-center md:gap-20'>           
             <div className='hidden xl:flex h-full w-[50vw] justify-center items-center'>
-              <h1>Vitor Hugo</h1>
+              <a href="/"><h1>Vitor Hugo</h1></a>
             </div>
             {/* Nav Desktop */}
             <div className='hidden md:flex w-[50vw] font-mono justify-center'>
               <ul className='flex gap-15 text-[14pt]'>
-                <li><a href="#QuemSou" className="hover:underline transition-2">{props.opcao1}</a></li>
+                <li><a href={props.op1href} className="hover:underline transition-2">{props.opcao1}</a></li>
                 <li><a href="#Servicos" className="hover:underline transition-2">{props.opcao2}</a></li>
-                <li><a href="" className="hover:underline transition-2">{props.opcao3}</a></li>
-                <li><a href="" className="hover:underline transition-2">{props.opcao4}</a></li>
+                <li><a href="#Portifolio" className="hover:underline transition-2">{props.opcao3}</a></li>
+                <li><a href="#Contato" className="hover:underline transition-2">{props.opcao4}</a></li>
               </ul>
             </div>
 
@@ -34,13 +35,13 @@ export const NavBar = (props : NavBarProps) => {
 
             {/* Nav Mobile */}
           { btn && (
-            <div className='absolute z-999 md:hidden w-full h-50 mt-70'>
+            <div className='absolute z-999 md:hidden w-full h-50 mt-60'>
               <div className=' bg-(--amarelo-queimado) p-10 inset-shadow-sm inset-shadow-900'>
                 <ul className='flex gap-15 flex-col items-center'>
-                <li><a href="">{props.opcao1}</a></li>
-                <li><a href="">{props.opcao2}</a></li>
-                <li><a href="">{props.opcao3}</a></li>
-                <li><a href="">{props.opcao4}</a></li>
+                <li><a href={props.op1href}>{props.opcao1}</a></li>
+                <li><a href="#Servicos">{props.opcao2}</a></li>
+                <li><a href="#Portifolio">{props.opcao3}</a></li>
+                <li><a href="#Contato">{props.opcao4}</a></li>
               </ul>
               </div>
             </div>

@@ -2,13 +2,20 @@ import './App.css'
 import { NavBar } from './components/navBar'
 import pfp from './assets/images/pfp.jpeg'
 import { Card } from './components/cards'
-import gmail from './assets/images/gmail.png'
 import linkedin from './assets/images/linkedin.png'
 import whatsapp from './assets/images/whatsapp.png'
+import { Portifólio } from './components/portifolio'
+import { useState } from 'react'
+
 
 
 
 function App() {
+  const [showPage, setShowPage] = useState(1);
+
+  const handleShowBtn = () => {
+    if(showPage<4) setShowPage(showPage+1);
+  }
 
   var text1 = "Cuido da clareza, coerência e correção do seu texto, aprimorando sua estrutura sem alterar sua voz. Cada palavra é revisada com atenção técnica e sensibilidade, garantindo fluidez e precisão."
   var text2 = "Adequo seu trabalho às normas exigidas (ABNT, APA ou outras), organizando citações, referências, margens e estrutura. Um cuidado essencial para que o conteúdo se apresente de forma profissional e padronizada."
@@ -16,7 +23,7 @@ function App() {
   var text4 = "Acompanho autores em seus processos de escrita e reescrita, ajudando a desenvolver projetos, estruturar narrativas e aperfeiçoar a voz autoral. Um trabalho de parceria, escuta e construção."
   return (
     <>
-      <NavBar opcao1='Quem Sou' opcao2='Serviços' opcao3='Portifólio' opcao4='Contato'/>
+      <NavBar opcao1='Quem Sou'op1href='#QuemSou' opcao2='Serviços' opcao3='Portifólio' opcao4='Contato'/>
      <main>
        <section className='w-full'>
         <div className='flex w-full h-170 drop-shadow-xl/10 bg-[linear-gradient(rgba(0,0,0,0.4),_rgba(0,0,0,0.4)),url(./assets/images/Banner.png)] bg-size-[1700px] bg-no-repeat bg-center'>
@@ -63,7 +70,7 @@ function App() {
       </section>
 
       <section id="Servicos" className='flex w-full h-auto flex-col'>
-        <div className='flex w-full justify-center p-20'>
+        <div className='flex w-full justify-center mt-10 mb-5'>
           <h1 className='font-mono text-[21pt] font-semibold tracking-wide hover:tracking-wider duration-400 cursor-default'>Serviços</h1>
         </div>
 
@@ -74,31 +81,43 @@ function App() {
           <Card name='Orientação Literária' img='' text={text4}/>
         </div>
 
-        <div className='flex w-full h-50 justify-center items-center'>
-          <button className='w-30 h-10 border rounded-xl hover:bg-black hover:text-white duration-150'><a href="/">Saiba Mais</a></button>
+        <div className='flex w-full h-35 justify-center items-center'>
+          <button className='w-30 h-10 border rounded-xl hover:bg-black hover:text-white duration-150'><a href="Sobre">Saiba Mais</a></button>
         </div>
       </section>
 
-      <footer id='#Contato' className='flex w-full h-auto flex-col items-center bg-[var(--bege)]'>
+      <section id='Portifolio' className='flex w-full h-auto flex-col items-center'>
+        <div className='flex w-full justify-center mb-10'>
+          <h1 className='text-[24pt] font-mono cursor-default uppercase font-bold hover:tracking-wider duration-200'>Portifólio</h1>
+        </div>
+        <Portifólio showMore={showPage}/>
+        <div className='flex w-full h-30 justify-center items-center'>
+          <button onClick={handleShowBtn} className={`${showPage<4 ? '' : 'hidden'} border h-15 w-40 rounded-xl hover:bg-black hover:text-white duration-200`}>
+            {showPage<3 ? 'Ver Mais' : 'Ver Todos'}
+          </button>
+        </div>
+      </section>
+
+      <footer id='Contato' className='flex w-full h-auto flex-col items-center bg-[var(--bege)]'>
         <h1 className='p-5 mt-10 font-bold text-[21pt] tracking-[5px] hover:tracking-[10px] duration-500'>Contato</h1>
         <div className='flex justify-center items-center mt-8'>
           <h2 className='text-center'>Quer saber mais, pedir um orçamento ou conversar sobre o seu projeto? Fale comigo!</h2>
         </div>
         <div className='flex w-full h-[20vh] flex-col justify-start items-center p-10'>
           <div>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=editorvitorhugo@gmail.com" className='underline text-[var(--marrom)]'>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=editorvitorhugo@gmail.com" className='underline text-[var(--marrom)]'  target="_blank" rel="noopener noreferrer">
             editorvitorhugo@gmail.com
             </a>  
           </div>
           <div className='flex flex-row gap-5 items-center mt-5'>     
             <button>
-              <a href="">
+              <a href="https://www.linkedin.com/in/vitorhugobatista/" target="_blank" rel="noopener noreferrer">
                 <img src={linkedin} alt="" width={35}/>
               </a>
             </button>
 
             <button>
-              <a href="">
+              <a href="https://wa.me/+5541996485933" target="_blank" rel="noopener noreferrer">
                 <img src={whatsapp} alt="" width={35}/>
                 </a>
                 </button>

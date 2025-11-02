@@ -1,6 +1,6 @@
 interface cardProps {
     name: string;
-    text: string;
+    text?: string;
     img: string;
 }
 
