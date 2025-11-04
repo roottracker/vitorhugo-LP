@@ -1,5 +1,11 @@
 import { useEffect } from "react"
+import { RevTexto } from "./components/revTexto"
+import { FormTrabAca } from "./components/formTrabAca"
+import { LeituraCritica } from "./components/leituraCritica"
+import { OrientacaoLiteraria } from "./components/orientacaoLiteraria"
+import { Footer } from "./components/footer"
 import { NavBar } from "./components/navBar"
+
 
 function Sobre(){
       useEffect(() => {
@@ -24,40 +30,23 @@ function Sobre(){
     
     return(
         <>
-        <NavBar opcao1="Voltar ao Inicio" op1href="/"/>
-        <br /><br /><br /><main>
-            <section className="reveal">
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </section>
-
-            <section>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </section>
-
-            <section>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </section>
-
-            <section>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </section>
-
+        <NavBar 
+        showName={false} 
+        navStatic={true}  
+        opcao1="Revisão de Texto" 
+        op1href="#Revisao" 
+        opcao2="Formatação de trabalhos acadêmicos" 
+        op2href="#Formatacao" 
+        opcao3="Leitura Crítica" 
+        op3href="#Leitura" 
+        opcao4="Orientação Literária"
+        op4href="#Orientacao"/>
+        <main className="">
+           <RevTexto  id="Revisao"/>
+           <FormTrabAca id="Formatacao"/>
+           <LeituraCritica id="Leitura"/>
+           <OrientacaoLiteraria id="Orientacao"/>
+           <Footer/>
         </main>
         </>
     )

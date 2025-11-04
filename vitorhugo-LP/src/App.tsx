@@ -2,10 +2,9 @@ import './App.css'
 import { NavBar } from './components/navBar'
 import pfp from './assets/images/pfp.jpeg'
 import { Card } from './components/cards'
-import linkedin from './assets/images/linkedin.png'
-import whatsapp from './assets/images/whatsapp.png'
 import { Portifólio } from './components/portifolio'
 import { useState } from 'react'
+import { Footer } from './components/footer'
 
 
 
@@ -23,7 +22,7 @@ function App() {
   var text4 = "Acompanho autores em seus processos de escrita e reescrita, ajudando a desenvolver projetos, estruturar narrativas e aperfeiçoar a voz autoral. Um trabalho de parceria, escuta e construção."
   return (
     <>
-      <NavBar opcao1='Quem Sou'op1href='#QuemSou' opcao2='Serviços' opcao3='Portifólio' opcao4='Contato'/>
+      <NavBar showName={true} navStatic={true} opcao1='Quem Sou'op1href='#QuemSou' opcao2='Serviços' op2href='#Servicos' opcao3='Portifólio' op3href='#Portifolio' opcao4='Contato' op4href='#Contato'/>
      <main>
        <section className='w-full'>
         <div className='flex w-full h-170 drop-shadow-xl/10 bg-[linear-gradient(rgba(0,0,0,0.4),_rgba(0,0,0,0.4)),url(./assets/images/Banner.png)] bg-size-[1700px] bg-no-repeat bg-center'>
@@ -98,42 +97,7 @@ function App() {
         </div>
       </section>
 
-      <footer id='Contato' className='flex w-full h-auto flex-col items-center bg-[var(--bege)]'>
-        <h1 className='p-5 mt-10 font-bold text-[21pt] tracking-[5px] hover:tracking-[10px] duration-500'>Contato</h1>
-        <div className='flex justify-center items-center mt-8'>
-          <h2 className='text-center'>Quer saber mais, pedir um orçamento ou conversar sobre o seu projeto? Fale comigo!</h2>
-        </div>
-        <div className='flex w-full h-[20vh] flex-col justify-start items-center p-10'>
-          <div>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=editorvitorhugo@gmail.com" className='underline text-[var(--marrom)]'  target="_blank" rel="noopener noreferrer">
-            editorvitorhugo@gmail.com
-            </a>  
-          </div>
-          <div className='flex flex-row gap-5 items-center mt-5'>     
-            <button>
-              <a href="https://www.linkedin.com/in/vitorhugobatista/" target="_blank" rel="noopener noreferrer">
-                <img src={linkedin} alt="" width={35}/>
-              </a>
-            </button>
-
-            <button>
-              <a href="https://wa.me/+5541996485933" target="_blank" rel="noopener noreferrer">
-                <img src={whatsapp} alt="" width={35}/>
-                </a>
-                </button>
-            
-          </div>
-          
-        </div>
-        <div className='flex flex-row w-full'>
-          <div className='flex w-full'>
-            <p className=' text-justify'>Revisor Vitor Hugo | 2025 © Todos os direitos reservados.</p>
-          </div>
-          <div>
-
-          </div>
-        </div>
-      </footer>
+      <Footer/>
      </main>
      
     </>
