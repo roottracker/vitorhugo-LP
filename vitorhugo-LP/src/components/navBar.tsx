@@ -48,10 +48,10 @@ export const NavBar = (props : NavBarProps) => {
             <div className='absolute z-999 md:hidden w-full h-50 mt-60'>
               <div className=' bg-(--amarelo-queimado) p-10 inset-shadow-sm inset-shadow-900'>
                 <ul className='flex gap-15 flex-col items-center'>
-                <li><a href={props.op1href}>{props.opcao1}</a></li>
-                <li><a href={props.op2href} >{props.opcao2}</a></li>
-                <li><a href={props.op3href} >{props.opcao3}</a></li>
-                <li><a href={props.op4href} >{props.opcao4}</a></li>
+                <li><a href={props.op1href} onClick={() => setBtn(!btn)}>{props.opcao1}</a></li>
+                <li><a href={props.op2href} onClick={() => setBtn(!btn)}>{props.opcao2}</a></li>
+                <li><a href={props.op3href} onClick={() => setBtn(!btn)}>{props.opcao3}</a></li>
+                <li><a href={props.op4href} onClick={() => setBtn(!btn)}>{props.opcao4}</a></li>
               </ul>
               </div>
             </div>
