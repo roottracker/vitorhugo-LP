@@ -46,8 +46,18 @@ function Sobre(){
            <FormTrabAca id="Formatacao"/>
            <LeituraCritica id="Leitura"/>
            <OrientacaoLiteraria id="Orientacao"/>
+            <div className="flex w-full flex-col items-center  xl:p-5">
+                    <div className="flex w-full items-center justify-center">
+                    <h3 className="pb-5 text-[14pt]">Formas de pagamento</h3>
+                    </div>
+                    <ul className="flex list-disc list-inside flex-col text-left h-auto justify-center ml-5">
+                    <li>À vista, via <strong>PIX</strong> ou <strong>transferência bancária</strong>, com desconto.</li><br />
+                    <li><strong>50% na assinatura do contrato e 50% na entrega.</strong></li><br />
+                    <li>Ou em até <strong>3x sem juros no cartão.</strong></li><br />
+                    </ul>
+                </div>
            <Footer/>
-        </main>
+           </main>
         </>
     )
 }

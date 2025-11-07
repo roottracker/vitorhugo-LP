@@ -39,11 +39,11 @@ export const CardPorti = (props: cardProps) => {
 
             <div className="flex w-full h-30 flex-col justify-center items-center">
               <div className="flex w-full justify-center">
-                <h1 className="text-center font-bold">{props.name}</h1>
+                <h1 className="text-center font-bold" style={{ fontFamily: 'Alegreya SC, serif' }}>{props.name}</h1>
             </div>
 
             <div className="flex items-center">
-                <p className="text-center">{props.autor}</p>
+                <p className="text-center" style={{ fontFamily: 'Alegreya SC, serif' }}>{props.autor}</p>
             </div> 
             </div>
         </div>

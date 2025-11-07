@@ -1,8 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;700&family=Alice&family=Merriweather:wght@300;400;700&family=Lato:wght@300;400;700&display=swap');
 @import "tailwindcss";
 
+
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 1px black; /* contorno preto de 1px */
+    color: transparent; /* texto fica só o contorno */
+  }
+
+  .text-outline-white {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+  }
+
+  .text-outline-glow {
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: 0 0 6px #fff, 0 0 10px #00f;
+  }
+}
+
 :root{
-  --verde-claro: #A8C686;
+  --verde: #a3cb75;
+  --amarelo: #c0ac53;
   --amarelo-queimado: #ffd991;
-  --bege: #EBD5B3;
-  --marrom: #655045;
+  --amarelo-queimado-claro: #ffe0a7;
+  --bege: #e7d6bb;
+  --marrom: #826554;
 }
