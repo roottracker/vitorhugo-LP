@@ -49,11 +49,10 @@ function App() {
      <main>
       <Modal img={bigImg} showImg={showModal} onClose={() => setShowModal(false)}/>
        <section className='w-full'>
-        <div className='flex w-full h-170 bg-[linear-gradient(rgba(0,0,0,0.4),_rgba(0,0,0,0.4)),url(./assets/images/Banner.png)] bg-size-[1700px] bg-no-repeat bg-center'>
+        <div className='flex w-full h-170 bg-[linear-gradient(rgba(0,0,0,0.4),_rgba(0,0,0,0.4)),url(./assets/images/Banner.png)] md:bg-size-[100vw] bg-no-repeat bg-center'>
           <div className='flex flex-col gap-5 w-full h-full justify-center items-center'>
             <p className='w-full md:w-[550px] text-center text-[18pt] text-white' style={{ fontFamily: 'Alegreya SC, serif' }}>Ajudo autores, pesquisadores e profissionais a aperfeiçoar seus textos para que comuniquem com precisão e impacto.</p>
-            <button><a href=""><p className='bg-(--bege) w-35 p-2 rounded hover:bg-(--marrom) hover:scale-110 hover:text-white duration-500'>acessar</p></a></button>
-          </div>
+           </div>
         </div>
       </section>
 
@@ -61,32 +60,32 @@ function App() {
         {/* Apresentação da pessoa */}
         <div id="QuemSou" className='flex w-full h-auto flex-col'>
           <div className='flex w-full h-auto flex-col items-center xl:flex-row '>
-            <div className='flex w-full h-[100vh] justify-center bg-[var(--amarelo-queimado-claro)] items-center bg-cover bg-center bg-no-repeat relative xl:w-[50vw]'>
-              <div className='flex  w-[50vw] mt-8 justify-center'>
+            <div className='flex w-full md:h-[100vh] flex-col items-center justify-start bg-[var(--amarelo-queimado-claro)] '>
+              <div className='flex w-full h-50 justify-center items-center'>
+                <h1 className='text-[20pt] font-semibold tracking-[5px] underline' style={{ fontFamily: 'Alegreya SC, serif' }}>Quem sou eu</h1>
+              </div>
+              <div className='flex w-full text-shadow-sm w-full flex-col md:flex-row items-center'>
+                <div className='flex  w-[50vw] mt-8 justify-center'>
                 <img 
                 src={pfp} 
                 alt="pfp" 
                 className='w-[370px] h-[380px] object-cover rounded-xl hover:scale-[1.03] duration-1000 md:w-[250px] ' 
               />
               </div>
-            </div>
-            <div className='flex w-full md:h-[100vh] flex-col items-center justify-start xl:w-[50vw] bg-[var(--amarelo-queimado-claro)] '>
-              <div className='flex w-full h-50 justify-center items-center'>
-                <h1 className='text-[20pt] font-semibold tracking-[5px] underline' style={{ fontFamily: 'Alegreya SC, serif' }}>Quem sou eu</h1>
-              </div>
-              <div className='text-shadow-sm'>
-                <p className='text-[14pt] w-[90vw] md:w-[60vw] xl:w-[550px] text-center md:text-justify' style={{ fontFamily: 'Alegreya SC, serif' }}>
+                <div className='flex w-[50vw] items-center justify-center flex-col'>
+                  <p className='text-[14pt] w-[90vw] md:w-[60vw] xl:w-[550px] text-center md:text-justify' style={{ fontFamily: 'Merriweather' }}>
                 Desde cedo, encontrei nas palavras um espaço de <strong>encantamento</strong> e <strong>descoberta</strong>. 
                 Essa paixão me levou a trilhar um caminho inteiro entre livros, editoras e revistas — 
                 experiências que moldaram meu olhar para o texto e a linguagem.</p>
-             <br /> <p className='text-[14pt] w-[90vw] md:w-[60vw] xl:w-[550px] text-center md:text-justify' style={{ fontFamily: 'Alegreya SC, serif' }}>
+             <br /> <p className='text-[14pt] w-[90vw] md:w-[60vw] xl:w-[550px] text-center md:text-justify' style={{ fontFamily: 'Merriweather' }}>
               Sou revisor de textos e integrante da equipe editorial da Revista Cidades (Qualis A2). 
                 Além disso, colaboro como revisor e redator para diversas editoras e revistas, unindo <strong>técnica</strong> e 
                 <strong> sensibilidade</strong> para ajudar autores a transmitirem suas ideias com clareza, fluidez e propósito.</p>
-              <br /><p className='text-[14pt] w-[90vw] md:w-[60vw] xl:w-[550px] text-center md:text-justify' style={{ fontFamily: 'Alegreya SC, serif' }}>
+              <br /><p className='text-[14pt] w-[90vw] md:w-[60vw] xl:w-[550px] text-center md:text-justify' style={{ fontFamily: 'Merriweather' }}>
                 Mais do que corrigir, acredito que revisar é acompanhar o texto em seu processo de amadurecimento, 
                 respeitando sua voz e cuidando para que cada palavra cumpra seu papel.
                 </p>
+                </div>
               </div>
 
                         
@@ -97,7 +96,7 @@ function App() {
 
       <section id="Servicos" className='flex w-full h-auto flex-col'>
         <div className='flex w-full justify-center mt-10 mb-5'>
-          <h1 className='f text-[21pt] font-semibold hover:scale-[1.1] duration-400 cursor-default' style={{ fontFamily: 'Alegreya SC, serif' }}>Serviços</h1>
+          <h1 className='f text-[21pt] font-semibold hover:scale-[1.1] duration-400 cursor-default' style={{ fontFamily: 'Merriweather' }}>Serviços</h1>
         </div>
 
         <div className='flex w-full min-h-100 h-auto flex-col justify-center items-center flex-wrap md:flex-row gap-5 cursor-default'>
@@ -108,13 +107,13 @@ function App() {
         </div>
 
         <div className='flex w-full h-35 justify-center items-center'>
-          <button className='w-30 h-10 border rounded-xl hover:bg-black hover:text-white duration-150'><a href="Sobre" style={{ fontFamily: 'Alegreya SC, serif' }}>Saiba Mais</a></button>
+          <button className='w-30 h-10 border rounded-xl hover:bg-black hover:text-white duration-150'><a href="Sobre" style={{ fontFamily: 'Merriweather' }}>Saiba mais</a></button>
         </div>
       </section>
 
       <section className='flex w-full min-h-100 h-auto border flex-col items-center p-10'>
         <div className='flex w-full h-10 justify-center mb-15'>
-          <h1 style={{fontFamily: 'Alegreya SC'}} className='text-[24pt] cursor-default uppercase font-bold hover:tracking-wider duration-200'>Depoimentos</h1>
+          <h1 style={{fontFamily: 'Merriweather'}} className='text-[24pt] cursor-default uppercase font-bold hover:tracking-wider duration-200'>Depoimentos</h1>
         </div>
         <div className='flex w-[60vw] flex-row flex-wrap justify-center gap-15'>
           <div className='flex border'>
@@ -138,7 +137,7 @@ function App() {
 
       <section id='Portifolio' className='flex w-full h-auto flex-col items-center'>
         <div className='flex w-full justify-center mb-10'>
-          <h1 className='text-[24pt] cursor-default uppercase font-bold hover:tracking-wider duration-200' style={{ fontFamily: 'Alegreya SC, serif' }}>Portfólio</h1>
+          <h1 className='text-[24pt] cursor-default uppercase font-bold hover:tracking-wider duration-200' style={{ fontFamily: 'Merriweather' }}>Portfólio</h1>
         </div>
         <Portifólio showMore={showPage}/>
         <div className='flex w-full h-30 justify-center items-center'>

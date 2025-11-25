@@ -25,12 +25,12 @@ export const NavBar = (props : NavBarProps) => {
             {
               props.showName && (
                 <div className='hidden xl:flex h-full w-[50vw] justify-center items-center'>
-                  <a href="/"><h1 className="font-bold text-[21pt]" style={{ fontFamily: 'Alice' }}>Revisor Vitor Hugo</h1></a>
+                  <a href="/"><h1 className="font-bold text-[21pt]" style={{ fontFamily: 'Merriweather' }}>Revisor Vitor Hugo</h1></a>
                 </div>
               )
             }
             {/* Nav Desktop */}
-            <div className='hidden md:flex w-[90vw] justify-center'  style={{ fontFamily: 'Alegreya SC, serif' }}>
+            <div className='hidden md:flex w-[90vw] justify-center'  style={{ fontFamily: 'Merriweather' }}>
               <ul className='flex gap-15 text-[14pt]'>
                 <li><a href={props.op1href} className="hover:underline transition-2">{props.opcao1}</a></li>
                 <li><a href={props.op2href} className="hover:underline transition-2">{props.opcao2}</a></li>

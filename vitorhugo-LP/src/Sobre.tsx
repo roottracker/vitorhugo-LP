@@ -31,7 +31,7 @@ function Sobre(){
     return(
         <>
         <NavBar 
-        showName={false} 
+        showName={true} 
         navStatic={true}  
         opcao1="Revisão de Texto" 
         op1href="#Revisao" 
